@@ -1,5 +1,17 @@
 # Introduction
 
+Javascrit is a `highlevel`, `object oriented`, `multi-paradigm` `programming` language.
+
+`Programming` - instructs computer to do things.
+
+`high-level` - handles memory management on its own making it easier to write.
+
+`object-oriented` - based on objects in storing most types of data.
+
+`multi-paridigm` - JS is flexible and you can use programming styles such as `imperative` and `declarative` programming styles. Basically, diffrent ways of structuring our code.
+
+<hr/>
+
 JavaScript is the programming language for the web.
 
 It allows us to add interactivity and dynamic functionalities to our websites.
@@ -46,12 +58,29 @@ JavaScript can handle multiple operations at once using asynchronous programming
 
 ## Where JavaScript is Used
 
-1. Web development - to create interactive elements, forms, animations and apis.
+1. Web development - to create interactive elements, forms, animations and apis. `(React, Angular, Vue)`
 
-2. Mobile App Development - Platforms such as React Native allow creation of cross platform apps. (android and ios).
+2. Mobile App Development - Platforms such as `React Native` and `Ionic` allow creation of cross platform apps. (android and ios).
 
-3. Backend Development - With platforms such as Node.js, JavaScript can power servers and Databases.
+3. Backend Development - With platforms such as `Node.js` and `Express.js`, JavaScript can power servers and Databases.
 
-4. Maching Learning and AI - frameworks such as TensorFlow.js allows AI models to run on browser.
+4. Maching Learning and AI - frameworks such as `TensorFlow.js` allows AI models to run on browser.
 
 5. Game Development -web based games.
+
+6. Desktop Applications (`electron`)
+
+## <i>You can build literary any thing when you become a master at JavaScript </i>
+
+## Using Comment
+
+```js
+//comment
+
+/*This is a Comment
+too, but for multilines */
+```
+
+- To deactivate code without deleting it.
+
+- Shortcut command for comment is: `CTRL + /`.
