@@ -41,3 +41,5 @@ for (let i = 0; i < 10; i++) {
 Example: if-else statement
 
 ## An expression is a code that produces a value.
+
+Example: 4+9
