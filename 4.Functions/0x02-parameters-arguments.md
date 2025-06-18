@@ -150,3 +150,52 @@ console.log(francis);
 > 98765432
 */
 ```
+
+Lets analyze the code:
+
+- The `flight` here is a primitive, because it is just a string.
+
+- The `flightNumber` in the function is basically a copy of the original value of the flight variable.
+
+It is the same as writing `flightNumber = flight`.
+
+- `flightNumber` here is a completely different variable.
+
+- So when we changed it inside the function, it did not get reflected in the outside variable.
+
+Now lets see the `francis` object that we passed into the `checkIn` function.
+
+- In the function, it is called passenger. We changed it inside the function and it changed.
+
+> Why did that Happen?
+
+- When we pass a reference type to a function, what is coppied is just the reference to the object in the memory heap.
+
+It is the same as doing this:
+
+```js
+const flightNumber = flight;
+const passenger = francis; // When we copy an object like this, we are only copying the reference to that object in the memory heap.
+```
+
+- In the function, we are manipulating the `francis object`.
+
+- Because `passenger` and `francis` are now the same objects in the memory heap.
+
+### Summary
+
+- Passing a primitive to a function is simply creating a copy outside of the function.
+
+```js
+const flightNumber = flight;
+```
+
+- When we pass an object to a function, it is copying the object like this:
+
+```js
+const passenger = francis;
+```
+
+What we change in the copy, will also change in the original since they reference to the same object in the memory heap.
+
+- Objects behave this way when passed to functions and this can lead to unforeseeable consequences in large code bases, especially when collaborating with other developers.
