@@ -272,6 +272,11 @@ Returns true if atleast one of the operands is true and returns false otherwise.
 
 Used to negate boolean values of an expression. It returns false when the expression is true and false the expression is true.
 
+```js
+console.log(!true); // false
+console.log(!false); // true
+```
+
 ### 1. Ternary Operators
 
 ### 1. Type Operators
