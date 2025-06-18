@@ -1,6 +1,8 @@
-for (let i = 0; i < 10; i++) {
-  if (i == 5) {
-    continue;
-  }
-  console.log(i);
+"use strict";
+
+greet(); //you call it first
+
+function greet() {
+  // here we declare it later
+  console.log("Hello, Good Morning!");
 }
