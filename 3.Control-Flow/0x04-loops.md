@@ -32,6 +32,10 @@ for (let i = 1; i <= 5; i++) {
 
 While loop runs as long as a specified condition remains true.
 
+- Used when you don't know how many iterations you will have.
+- It does not really need a counter, making it more versatile.
+- It only needs a condition to remain true for it to keep running.
+
 syntax:
 
 ```js
@@ -39,6 +43,8 @@ while (condition) {
   // code block to be executed if condition is true
 }
 ```
+
+- It keeps running while a condition is true.
 
 example code:
 
@@ -50,6 +56,11 @@ while (num <= 5) {
   num++;
 }
 ```
+
+EXAMPLE: Where we dont need a counter.
+
+- lets say we want to roll a dice until it is 6 to stop.
+- We dont know how many times it should roll.
 
 ## - do while loop
 
