@@ -1,9 +1,22 @@
-let dice = Math.trunc(Math.random() * 6) + 1;
-// We want to keep rolling the dice until we roll a six
+const francis = {
+  firstName: "Francis",
+  lastName: "Muraya",
+  birthYear: 1950,
+  hadDriversLicense: true,
+  friends: ["John", "Wick", "Doe"],
+  summary: function () {
+    this.summary = `My name is ${this.firstName} ${
+      this.lastName
+    }, I was born in ${this.birthYear}, I ${
+      this.hadDriversLicense ? "have" : "dont have"
+    } a driver's license. My friends are ${this.friends[0]}, ${
+      this.friends[1]
+    }, and ${this.friends[2]}`;
 
-while (dice !== 6) {
-  console.log(`You rolled a ${dice}`);
-  dice = Math.trunc(Math.random() * 6) + 1;
+    return this.summary;
+  },
+};
 
-  if (dice === 6) console.log(`the roll has closed .........`);
-}
+francis.summary();
+
+console.log(francis.summary);
