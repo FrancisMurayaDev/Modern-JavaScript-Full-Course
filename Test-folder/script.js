@@ -1,22 +1,21 @@
-const francis = {
-  firstName: "Francis",
-  lastName: "Muraya",
-  birthYear: 1950,
-  hadDriversLicense: true,
-  friends: ["John", "Wick", "Doe"],
-  summary: function () {
-    this.summary = `My name is ${this.firstName} ${
-      this.lastName
-    }, I was born in ${this.birthYear}, I ${
-      this.hadDriversLicense ? "have" : "dont have"
-    } a driver's license. My friends are ${this.friends[0]}, ${
-      this.friends[1]
-    }, and ${this.friends[2]}`;
+// Calculate the amplitude of the temperatures in an array. Ignore the errors.
 
-    return this.summary;
-  },
+const temperature = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
+
+const calcAmplitude = function (temps) {
+  let maxTemp = temps[0];
+  let minTemp = temps[0];
+
+  for (let i = 0; i < temps.length; i++) {
+    const currentTemp = temps[i];
+    if (typeof currentTemp !== "number") continue;
+    if (currentTemp > maxTemp) maxTemp = currentTemp;
+
+    if (currentTemp < minTemp) minTemp = currentTemp;
+  }
+  console.log(maxTemp, minTemp);
+  return maxTemp - minTemp;
 };
 
-francis.summary();
-
-console.log(francis.summary);
+const amplitude = calcAmplitude(temperature);
+console.log(amplitude);
