@@ -1,21 +1,25 @@
-// Calculate the amplitude of the temperatures in an array. Ignore the errors.
+/*
+1. Undestanding the Problem
 
-const temperature = [3, -2, -6, -1, "error", 9, 13, 17, 15, 14, 9, 5];
+- What type of array is passed? Number
+- How to display each value with the day.
 
-const calcAmplitude = function (temps) {
-  let maxTemp = temps[0];
-  let minTemp = temps[0];
 
-  for (let i = 0; i < temps.length; i++) {
-    const currentTemp = temps[i];
-    if (typeof currentTemp !== "number") continue;
-    if (currentTemp > maxTemp) maxTemp = currentTemp;
+2. Break the problem into sub-problems.
 
-    if (currentTemp < minTemp) minTemp = currentTemp;
+
+*/
+
+const printForecast = function (arr) {
+  let degrees = 0;
+  let day = 0;
+  let print = [];
+  for (let i = 0; i < arr.length; i++) {
+    degrees = arr[i];
+    day = i + 1;
+    print.push = `... ${degrees}°C in ${day} days.`;
   }
-  console.log(maxTemp, minTemp);
-  return maxTemp - minTemp;
+  console.log(print);
 };
 
-const amplitude = calcAmplitude(temperature);
-console.log(amplitude);
+printForecast([1, 2, 3]);
