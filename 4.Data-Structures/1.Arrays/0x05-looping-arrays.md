@@ -49,3 +49,22 @@ for (let excercise = 1; excercise < 5; excercise++) {
   }
 }
 ```
+
+## for of Loop
+
+Each element is logged one by one.
+
+```js
+let menu = ["Rice", "Ugali", "Meat", "Chapati"];
+
+for (let item of menu) {
+  console.log(item);
+}
+
+/*
+Rice
+Ugali
+Meat
+Chapati
+*/
+```
