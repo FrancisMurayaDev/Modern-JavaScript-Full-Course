@@ -1,8 +1,15 @@
-(function () {
-  console.log(`This will only run once!`);
-})();
+const secureBooking = function () {
+  let passengerCount = 0;
+  // passengerCount variable cannot be manipulated or accessed from the outside.
 
-(() => {
-  console.log(`This too will run only once!`);
-  const isPrivate = 23;
-})();
+  return function () {
+    passengerCount++;
+    console.log(`${passengerCount} passengers`);
+  };
+};
+
+const booker = secureBooking();
+
+booker(); // 1 passengers
+booker(); // 2 passengers
+booker(); // 3 passengers
