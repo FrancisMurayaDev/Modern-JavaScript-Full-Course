@@ -121,6 +121,12 @@ title.setAttribute("id", "awesome-title");
 console.log(title);
 ```
 
+### We can also remove attributes using `element.removeAttribute("attribute")`.
+
+```js
+gameInput.removeAttribute("readOnly");
+```
+
 ## Changing the Styling of HTML Elements
 
 We can use `element.style.property = "value"`
