@@ -61,11 +61,15 @@ console.log(students); // ['Nancy', 'John', 'Ken', 'June', 'Jack']
 6. ## `.at()`
 
 The `.at()` method returns an element at a specific index.
+Also used with strings.
 
 ```js
 const students = ["John", "Ken", "June", "Jack"];
 console.log(students.at(2)); // June
 console.log(students.at(0)); // John
+console.log(students.at(-1)); // Jack
+
+// -1 will get the last elmenet of an array.
 ```
 
 7. ## `.join()`
@@ -74,7 +78,7 @@ The join method joins all the array methods into a string.
 
 ```js
 const students = ["John", "Ken", "June", "Jack"];
-console.log(students.join("++")); // John++Ken++June++Jack
+console.log(students.join('"++"')); // John++Ken++June++Jack
 ```
 
 8. ## `.cancat()`
@@ -86,6 +90,12 @@ const arr1 = ["jack", "franklin", "june"];
 const arr2 = ["andrew", "alex", "ken"];
 console.log(arr1.concat(arr2));
 // [ 'jack', 'franklin', 'june', 'andrew', 'alex', 'ken' ]
+```
+
+we can also do this:
+
+```js
+[...arr1, ...arr2];
 ```
 
 9. ## `.flat()`
@@ -121,6 +131,8 @@ It returns true if it exists and false if it does not.
 12. ## `.reverse()`
 
 Reverses the elements of an array.
+
+It changes the original array.
 
 ```js
 const students = ["John", "Ken", "June", "Jack"];

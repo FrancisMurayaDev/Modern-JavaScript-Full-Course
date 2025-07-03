@@ -1,7 +1,7 @@
-const myArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
 
-const firstOddNumber = myArray.find(element => {
-  if (element % 2 !== 0) return element;
+const groupedMovements = Object.groupBy(movements, function (move) {
+  return move > 0 ? `deposits` : `withdrawals`;
 });
 
-console.log(firstOddNumber);
+console.log(groupedMovements);
