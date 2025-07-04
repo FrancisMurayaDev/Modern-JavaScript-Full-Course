@@ -1,7 +1,28 @@
-const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+const dateInput = document.querySelector(".js-datetime");
+const startBtn = document.querySelector(".js-start");
+const countdownDisplay = document.querySelector(".js-countdown");
 
-const groupedMovements = Object.groupBy(movements, function (move) {
-  return move > 0 ? `deposits` : `withdrawals`;
+startBtn.addEventListener("click", () => {
+  const targetDate = new Date(dateInput.value);
+  startCountdown(targetDate);
 });
 
-console.log(groupedMovements);
+function startCountdown(targetDate) {
+  const interval = setInterval(() => {
+    const now = new Date();
+    const diff = targetDate - now;
+
+    if (diff <= 0) {
+      clearInterval(interval);
+      countdownDisplay.textContent = "⏰ Time’s up!";
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    countdownDisplay.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }, 1000);
+}
