@@ -1,28 +1,8 @@
-const dateInput = document.querySelector(".js-datetime");
-const startBtn = document.querySelector(".js-start");
-const countdownDisplay = document.querySelector(".js-countdown");
+const h1 = document.querySelector(`h1`);
 
-startBtn.addEventListener("click", () => {
-  const targetDate = new Date(dateInput.value);
-  startCountdown(targetDate);
-});
+const alertH1 = function () {
+  alert(`You are hovering on the H1`);
+  h1.removeEventListener(`mouseenter`, alertH1);
+};
 
-function startCountdown(targetDate) {
-  const interval = setInterval(() => {
-    const now = new Date();
-    const diff = targetDate - now;
-
-    if (diff <= 0) {
-      clearInterval(interval);
-      countdownDisplay.textContent = "⏰ Time’s up!";
-      return;
-    }
-
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((diff / (1000 * 60)) % 60);
-    const seconds = Math.floor((diff / 1000) % 60);
-
-    countdownDisplay.textContent = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-  }, 1000);
-}
+h1.addEventListener(`mouseenter`, alertH1);
