@@ -27,7 +27,7 @@ It is recommended to use `addEventListener`.
 
 ### With `addEventListener` we can add multiple listeners to an event.
 
-And we can remove an event listener if we dont need it anymore.\
+And we can remove an event listener if we dont need it anymore.
 
 We need to export the function.
 
