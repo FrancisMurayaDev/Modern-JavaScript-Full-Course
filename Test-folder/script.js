@@ -31,3 +31,5 @@ switch (day) {
 }
 
 let;
+
+let year = 2025;
